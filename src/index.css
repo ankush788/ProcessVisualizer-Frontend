@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @apply font-text;
+  }
+}
+
+@layer components {
+  .font-heading {
+    @apply tracking-wide;
+  }
+
+  .inputStyles {
+    @apply text-sm md:text-base px-2 py-1 md:px-4 md:py-2 border border-slate-300 rounded-lg shadow-sm placeholder-slate-400 focus:outline-none focus:border-black invalid:border-pink-500 invalid:text-pink-600;
+  }
+
+  .err {
+    @apply text-xs md:text-sm text-red-500 text-center
+  }
+}
+
+@layer utilities {
+  .gradient {
+    /* @apply bg-gradient-to-r from-cyan-500 to-blue-500; */
+  }
+
+  .shadow {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 2px, rgba(15, 91, 206, 0.1) 0px 2px 16px;
+  }
+  
+  .shadow-text {
+    /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1) */
+  }
+}
